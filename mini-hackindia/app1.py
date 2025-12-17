@@ -6,7 +6,8 @@ import streamlit.components.v1 as components
 # =====================================
 # 🔑 GROQ API KEY
 # =====================================
-client = Groq(api_key="PLACE_API_KEY_HERE")
+
+client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
 # =====================================
 # ✅ STABLE GROQ MODEL
@@ -117,3 +118,4 @@ if st.button("Generate"):
 
             st.markdown("### 🎨 Live UI Preview")
             components.html(ui_code, height=550, scrolling=True)
+
