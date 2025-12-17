@@ -7,7 +7,9 @@ import streamlit.components.v1 as components
 # 🔑 GROQ API KEY
 # =====================================
 
-client = Groq(api_key=st.secrets["GROQ_API_KEY"])
+def get_groq_client():
+    return Groq(api_key=st.secrets["GROQ_API_KEY"])
+
 
 # =====================================
 # ✅ STABLE GROQ MODEL
@@ -17,8 +19,9 @@ MODEL_NAME = "llama-3.1-8b-instant"
 # =====================================
 # 🔥 PROMPT ENHANCER + GOOGLE-STYLE INFO
 # =====================================
-@st.cache_data(show_spinner=False)
 def enhance_and_search(user_prompt: str):
+    client = get_groq_client()
+
 
     combined_prompt = f"""
 You are a search assistant.
@@ -58,6 +61,7 @@ USER QUERY:
 # 🎨 UI / WEBSITE GENERATION
 # =====================================
 def generate_ui_code(enhanced_prompt: str):
+    client = get_groq_client()
 
     ui_prompt = f"""
 Generate a complete frontend UI based on the topic below.
@@ -118,4 +122,5 @@ if st.button("Generate"):
 
             st.markdown("### 🎨 Live UI Preview")
             components.html(ui_code, height=550, scrolling=True)
+
 
