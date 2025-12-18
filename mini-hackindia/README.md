@@ -51,6 +51,7 @@ The proposed system refines user prompts using AI, provides concise and factual 
 ---
 
 ## 📂 Project Structure
+
 ├── app1.py
 ├── requirements.txt
 └── README.md
@@ -67,12 +68,13 @@ Install dependencies using:
 
 ```bash
 pip install -r requirements.txt
+```
 
-
-How to Run Locally
+## ▶️ How to Run Locally
+```bash
 streamlit run app1.py
-
-🔐 API Key Configuration
+```
+## 🔐 API Key Configuration
 
 The API key is securely managed and not hardcoded.
 
@@ -80,7 +82,7 @@ For deployment, add the following in Streamlit Cloud → Secrets:
 
 GROQ_API_KEY = "gsk_xxxxxxxxxxxxxxxxx"
 
-🌍 Deployment
+## 🌍 Deployment
 
 The application is deployed using Streamlit Community Cloud, providing a live and interactive demo accessible via a public URL.
 
@@ -100,16 +102,17 @@ This project was developed collaboratively by a four-member team, with clearly d
 - **Garima Rani:**  
   Handled deployment and documentation tasks, managed the GitHub repository, and assisted in testing and final validation of the application.
 
-🏁 HackIndia Project Context
+## 🏁 HackIndia Project Context
 
 This project was developed and showcased as part of HackIndia, focusing on building a practical hybrid AI system that integrates prompt engineering with automated UI generation.
 
-📌 Tagline
+## 📌 Tagline
 
-Smarter Prompts. Sharper Answers.
+Think it.Prompt it.Get it.
 
-📄 License
+## 📄 License
 
 This project is intended for educational and hackathon demonstration purposes.
+
 
 ---
